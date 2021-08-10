@@ -1,16 +1,27 @@
-.Slider
-        display: flex
+@import 'slick-carousel/slick/slick.css'
+@import 'slick-carousel/slick/slick-theme.css'
+.SiteSlider
+    display: flex
+    width: 100%
+    max-width: 754px
+    align-self: center
+    padding: 68px
+    justify-content: space-between
+    
+    .slides
         width: 100%
-        max-width: 686px
-        margin: auto
-        margin-top: 68px
-        margin-bottom: 68px
-        justify-content: space-between
-        
-        .slides
-            display: flex
-        .arrow
-            display: flex
-            align-items: center
-            &:hover
-                cursor: pointer
+
+    .arrow
+        display: flex
+        align-items: center
+        &:hover
+            cursor: pointer
+    .slick-arrow
+        height: 35px
+        width: 35px
+        z-index: 1
+        cursor: pointer
+    .slick-next
+        right: -40px
+    .slick-prev
+        left: -40px

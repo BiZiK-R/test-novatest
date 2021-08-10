@@ -16,16 +16,16 @@ const Header = () => {
             <h2 className="color-pink">spike</h2>
             <ul className="menu">
                 <li>
-                    <button>Все кино</button>
+                    <a>Все кино</a>
                 </li>
                 <li>
-                    <button>Рейтинги</button>
+                    <a>Рейтинги</a>
                 </li>
                 <li>
-                    <button>Общение</button>
+                    <a>Общение</a>
                 </li>
                 <li>
-                    <button>Войти</button>
+                    <a>Войти</a>
                 </li>
             </ul>
         </div>

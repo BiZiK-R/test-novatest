@@ -1,16 +1,34 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './slide.sass';
 
 
-const Slide = ({imgUrl}) => {
-    const slideStyle = {
-        background: `url(${imgUrl})`
-    }
-    return (
-    <div className="Slide" style={slideStyle}>
-        <img src={'/img/zoom2.png'} alt='slide1'/>
-    </div>
-    )
-}
+export default class Slide extends Component {
 
-export default Slide;
+    state = {
+        mouseIn: false
+    }
+
+    inImage = () => {
+        this.setState({
+            mouseIn: true
+        })
+        
+    }
+    outImage = () => {
+        this.setState({
+            mouseIn: false
+        })
+    }
+    render() {
+        const zoom = this.state.mouseIn ? <img className="zoom" src={'/img/zoom2.png'} alt='zoom'/> : null;
+        return (
+            <div className="Slide" onMouseEnter={this.inImage} onMouseLeave={this.outImage}>
+                <div>
+                    <img className="image" src={this.props.imgUrl} alt='slide'/>
+                    {zoom}
+                </div>
+            </div>
+        );
+    }
+    
+}

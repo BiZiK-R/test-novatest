@@ -1,7 +1,18 @@
 .Reviews
     display: flex
     justify-content: space-around
+    @media screen and (max-width: 815px)
+        flex-wrap: wrap
+    @media screen and (max-width: 550px)
+        flex-wrap: nowrap
+    @media screen and (max-width: 436px)
+        flex-wrap: wrap
     line-height: 1
-    margin: 40px 0
+    margin: 40px 20px
+    & > *
+        @media screen and (max-width: 815px)
+            margin-top: 20px
     h3
         font-size: 24px
+        @media screen and (max-width: 550px)
+            font-size: 18px
