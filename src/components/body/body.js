@@ -1,6 +1,7 @@
 import React from 'react';
 import './body.sass';
 import Slider from '../slider';
+import Reviews from '../reviews';
 
 const Body = () => {
   return (
@@ -18,21 +19,7 @@ const Body = () => {
                     яме. Но течение в ней слишком быстрое.
                 </p>
             </div>
-            <div className="reviews">
-                <h3>Рецензии:</h3>
-                <div className="positive">
-                    <p>266</p>
-                    <p>положительных</p>
-                </div>
-                <div className="neutral">
-                    <p>41</p>
-                    <p>нейтральных</p>
-                </div>
-                <div className="negative">
-                    <p>66</p>
-                    <p>негативных</p>
-                </div>
-            </div>
+            <Reviews countPositive={266} countNeutral={41} countNegative={66}/>
         </div>
         <div className="trailer">
             <img src='/img/play.png' alt="player"/>
